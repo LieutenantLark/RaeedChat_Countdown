@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>RaeedChat--Its coming!</title>
+	<style>
+h1{
+  font-size: 500%;
+  text-align: center;
+  color: #45b6fe;
+  font-family: "Trebuchet MS";
+      text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #45b6fe, 0 0 30px #3792cb, 0 0 40px #296d98, 0 0 50px #1c4966, 0 0 60px #1c4966;
+  margin: 0;
+}
+html,head,body{
+  background: black
+}
+.logo{
+  margin-top: 40vh;
+  padding-left: 30vw;
+  width: 40%;
+}
+    </style>
+
+	<img class="logo"src = "logorc.png"></img>
+<h1 class="demo"id="demo"></h1>
+<h1 class= "demo"id="link"></h1>
+</head>
+<body>
+<script>
+
+var countDownDate = new Date("March 26 2021 14:00:00").getTime();
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "RaeedChat IS LIVE!" ;
+    document.getElementById('link').innerHTML +="<a style='color:#45b6fe; text-decoration: none;'href=http://raeedchat.com/'>CLICK TO CHAT NOW</a>";
+
+
+  }
+
+}, 1000);
+</script>
+</body>
+</html>
